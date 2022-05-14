@@ -1,0 +1,51 @@
+<div class="container-fluid c-add-product">
+  <div class="c-add-product__form">
+    <h1>Adicionar novo produto</h1>
+    <form
+      class="c-add-product__information-product"
+      [formGroup]="adicionarProduto"
+    >
+      <div class="d-flex align-items-center h-50">
+        <button
+          type="button"
+          (click)="fileInput.click()"
+          class="btn border border-info btn-img align-items-center justify-content-center"
+        >
+          <fa-icon [icon]="faImage"></fa-icon>
+          <span>Escolha a imagem do seu produto</span>
+        </button>
+        <input
+          #fileInput
+          type="file"
+          hidden
+          formControlName="file"
+          accept="image/*"
+          (change)="gravaArquivo($event.target)"
+        />
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome do produto</mat-label>
+        <input matInput formControlName="title" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Preço do produto</mat-label>
+        <input matInput formControlName="value" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="category">
+          <mat-option value="one">Star-Wars</mat-option>
+          <mat-option value="two">Consoles</mat-option>
+          <mat-option value="three">Diversos</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição do produto</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+      <button mat-raised-button class="p-2 btn btn-primary my-2">
+        Primary
+      </button>
+    </form>
+  </div>
+</div>

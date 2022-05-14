@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white container-fluid">
+  <div class="container m-auto row">
+    <div class="d-flex w-100 align-items-center">
+      <div class="col-md-10 col-sm-8 col-6">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 d-flex align-items-center">
+            <a routerLink="">
+              <img
+                src="./assets/img/Logo.png"
+                alt="Logo AluraGeek"
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <form class="col-md-4 col-sm-6 form-input">
+            <mat-form-field appearance="outline" class="rounded-3 w-100">
+              <mat-label>Oque deseja encontrar?</mat-label>
+              <input matInput placeholder="Ex:Item..." class="my-0" />
+              <mat-icon matSuffix
+                ><fa-icon [icon]="faSearch"></fa-icon
+              ></mat-icon>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      <div class="col-4 col-sm-4 col-md-2 d-flex justify-content-end">
+        <input
+          type="button"
+          routerLink="/login"
+          class="btn btn-light w-75 border rounded-3 border-info"
+          value="Login"
+        />
+      </div>
+      <div class="col-2 justify-content-end icon-search">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </div>
+    </div>
+  </div>
+</nav>

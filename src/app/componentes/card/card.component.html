@@ -1,0 +1,10 @@
+<mat-card class="example-card c-card__item">
+  <mat-card-title-group>
+    <img mat-card-lg-image src="{{ product.img }}" />
+  </mat-card-title-group>
+  <mat-card-content>
+    <p>Produto XYL</p>
+    <p>R$60,00</p>
+    <a [routerLink]="['/descricao-produto', product.id]">Ver produto</a>
+  </mat-card-content>
+</mat-card>

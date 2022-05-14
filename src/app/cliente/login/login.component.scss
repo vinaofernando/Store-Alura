@@ -1,0 +1,54 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+.c-login {
+  background-color: #e5e5e5;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+
+  &__form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Raleway";
+    .mat-form-field {
+      width: 60%;
+      margin-bottom: 20px;
+      ::ng-deep {
+        .mat-form-field-wrapper {
+          background-color: white;
+          border-radius: 4px;
+        }
+      }
+    }
+    .btn-visibility {
+      display: flex;
+      height: 25%;
+      padding: 5px;
+      border-radius: 5px;
+      align-items: center;
+    }
+    button {
+      width: 40%;
+      padding: 10px;
+      background-color: #2a7ae4;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      border-style: none;
+    }
+    button:hover {
+      background-color: #043f8d;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .c-login__form {
+    width: 100%;
+  }
+}

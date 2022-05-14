@@ -1,0 +1,20 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0px;
+}
+
+.icon-search {
+  display: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .form-input {
+    display: none;
+  }
+  .icon-search {
+    display: flex;
+  }
+}

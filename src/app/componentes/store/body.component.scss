@@ -1,0 +1,102 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+.c-banner {
+  width: 100%;
+  background-image: url("/assets/img/Hero1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 382px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__t-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text-banner {
+    width: 100%;
+    margin-top: 100px;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 4vw;
+      font-family: "Raleway";
+    }
+    p {
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.5vw;
+    }
+    input {
+      background-color: rgb(0, 153, 255);
+      color: white;
+      width: 15%;
+    }
+  }
+}
+.c-items {
+  margin-top: 60px;
+
+  h1 {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.c-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: 90%;
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  .c-banner {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__t-banner {
+      margin: 0px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__text-banner {
+      margin-bottom: 20px;
+      h1 {
+        font-size: 5vw;
+      }
+      p {
+        font-weight: 500;
+        font-size: 3vw;
+      }
+      input {
+        width: 25%;
+      }
+    }
+  }
+}
