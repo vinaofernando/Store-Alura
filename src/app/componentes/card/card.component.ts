@@ -8,10 +8,12 @@ import { Product } from '../shared/store';
 })
 export class CardComponent implements OnInit {
   @Input() product!: Product;
+  
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.product);
+    console.log(this.product.price);
   }
+  
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE,  LOCALE_ID,  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,12 @@ import { RouterModule } from '@angular/router';
 import { ListProductsComponent } from './produtos/list-products/list-products.component';
 import { AddProductComponent } from './produtos/add-product/add-product.component';
 import { MatSelectModule } from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -49,8 +55,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,
     RouterModule,
     MatSelectModule,
+    MatDialogModule
+   
   ],
-  providers: [],
+  providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL'}, { provide: LOCALE_ID, useValue: 'pt' },],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

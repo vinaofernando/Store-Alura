@@ -7,7 +7,7 @@ import { BD_VIRTUAL_STORE, Product } from 'src/app/componentes/shared/store';
   styleUrls: ['./list-products.component.scss'],
 })
 export class ListProductsComponent implements OnInit {
-  @Input() product!: any;
+  @Input() listProducts!: Product[];
   constructor() {}
 
   ngOnInit(): void {}
