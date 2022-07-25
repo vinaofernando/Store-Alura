@@ -12,9 +12,9 @@
   <div class="container c-items" *ngFor="let category of listCategory">
     <div class="d-flex justify-content-between align-items-center">
       <h1>{{ category }}</h1>
-      <a href=""
+      <button  mat-button color="primary" 
         >Ver tudo<fa-icon [icon]="faarrowright" class="ms-2"></fa-icon
-      ></a>
+      ></button>
     </div>
     <app-list-products
       [listProducts]="productsByCategory(category)"

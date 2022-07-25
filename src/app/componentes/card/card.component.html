@@ -7,7 +7,7 @@
     <p class="c-card__item-price">
       {{ product.price | currency: "BRL" }}
     </p>
-    <a [routerLink]="['/descricao-produto', product.id]">Ver produto</a>
+    <a (click)="openModal(product)">Ver produto</a>
     
   </mat-card-content>
 </mat-card>

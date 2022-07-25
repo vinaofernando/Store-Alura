@@ -25,7 +25,8 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-
+import { ModalListarItensComponent } from './componentes/modal/modal-listar-itens/modal-listar-itens.component';
+import {MatButtonModule} from '@angular/material/button'
 
 registerLocaleData(ptBr);
 
@@ -41,6 +42,7 @@ registerLocaleData(ptBr);
     DescricaoProdutoComponent,
     ListProductsComponent,
     AddProductComponent,
+    ModalListarItensComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ registerLocaleData(ptBr);
     MatIconModule,
     RouterModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
    
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL'}, { provide: LOCALE_ID, useValue: 'pt' },],
