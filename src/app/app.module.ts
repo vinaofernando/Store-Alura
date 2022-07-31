@@ -17,7 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './cliente/login/login.component';
 import { CadastroClienteComponent } from './cliente/cadastro-cliente/cadastro-cliente.component';
 import { MatIconModule } from '@angular/material/icon';
-import { DescricaoProdutoComponent } from './produtos/descricao-produto/descricao-produto.component';
+import { TodosOsProdutosComponent } from './produtos/todos-os-produtos/todos-os-produtos.component';
 import { RouterModule } from '@angular/router';
 import { ListProductsComponent } from './produtos/list-products/list-products.component';
 import { AddProductComponent } from './produtos/add-product/add-product.component';
@@ -27,6 +27,7 @@ import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ModalListarItensComponent } from './componentes/modal/modal-listar-itens/modal-listar-itens.component';
 import {MatButtonModule} from '@angular/material/button'
+
 
 registerLocaleData(ptBr);
 
@@ -39,7 +40,7 @@ registerLocaleData(ptBr);
     FooterComponent,
     LoginComponent,
     CadastroClienteComponent,
-    DescricaoProdutoComponent,
+    TodosOsProdutosComponent,
     ListProductsComponent,
     AddProductComponent,
     ModalListarItensComponent,
@@ -58,7 +59,7 @@ registerLocaleData(ptBr);
     RouterModule,
     MatSelectModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
    
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL'}, { provide: LOCALE_ID, useValue: 'pt' },],

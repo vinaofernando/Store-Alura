@@ -1,0 +1,26 @@
+<div class="my-5 d-flex">
+  <div class="c-category">
+    <span>Categorias</span>
+    <mat-divider class="mb-2"></mat-divider>
+    <div class="c-category__list-category">
+        <mat-selection-list #shoes>
+            <mat-list-option *ngFor="let shoe of typesOfShoes">
+              {{shoe}}
+            </mat-list-option>
+          </mat-selection-list>
+          <p>
+            Opçoes selecionadas: {{shoes.selectedOptions.selected.length}}
+          </p>
+    </div>
+  </div>
+
+  <div class="container-xl ms-0">
+    <div class="d-flex justify-content-start">
+      <h1 class="">Todos os Produtos</h1>
+    </div>
+    <mat-divider class="mb-3"></mat-divider>
+    <div class="m-3">
+      <app-list-products [listProducts]="products"></app-list-products>
+    </div>
+  </div>
+</div>

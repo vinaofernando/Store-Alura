@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './cliente/login/login.component';
 import { BodyComponent } from './componentes/store/body.component';
 import { AddProductComponent } from './produtos/add-product/add-product.component';
-import { DescricaoProdutoComponent } from './produtos/descricao-produto/descricao-produto.component';
+import { TodosOsProdutosComponent } from './produtos/todos-os-produtos/todos-os-produtos.component';
 
 const routes: Routes = [
   {
@@ -15,8 +15,8 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'descricao-produto/:produtoId',
-    component: DescricaoProdutoComponent,
+    path: 'todos-os-produtos',
+    component: TodosOsProdutosComponent,
   },
   {
     path: 'add-product',

@@ -1,0 +1,41 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+h1 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.c-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin-top: 50px;
+  
+
+  span {
+     font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  &__list-category {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    border-radius: 5%;
+    height: auto;
+
+    p{
+      margin:0px 0px 0px 15px;
+    }
+  }
+}

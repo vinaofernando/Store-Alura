@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { faDoorClosed } from '@fortawesome/free-solid-svg-icons';
+import { faDoorClosed, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { CarteiraResultadosModal } from './modal-listar-itens.types';
 
 @Component({
@@ -9,7 +9,7 @@ import { CarteiraResultadosModal } from './modal-listar-itens.types';
   styleUrls: ['./modal-listar-itens.component.scss']
 })
 export class ModalListarItensComponent implements OnInit {
-  faDoorClosed = faDoorClosed
+  faDoorClosed = faTimes
 
 
   constructor(public dialogRef: MatDialogRef<ModalListarItensComponent>,

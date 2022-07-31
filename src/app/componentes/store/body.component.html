@@ -2,7 +2,7 @@
   <div class="container-fluid c-banner">
     <div class="container c-banner__t-banner">
       <div class="text-white c-banner__text-banner">
-        <h1>Dezembro Promocional</h1>
+        <h1>Dezembro Promocional </h1>
         <p>Produtos selecionados com 30% de desconto</p>
         <input type="button" class="btn border rounded-3" value="Ver Console" />
       </div>
@@ -13,7 +13,7 @@
     <div class="d-flex justify-content-between align-items-center">
       <h1>{{ category }}</h1>
       <button  mat-button color="primary" 
-        >Ver tudo<fa-icon [icon]="faarrowright" class="ms-2"></fa-icon
+      [routerLink]="['/todos-os-produtos']">Ver tudo<fa-icon [icon]="faarrowright" class="ms-2"></fa-icon
       ></button>
     </div>
     <app-list-products

@@ -19,7 +19,7 @@ export class BodyComponent implements OnInit {
   public produtoId!: string;
   public product!: Product | undefined;
 
-  constructor(private readonly dialog: MatDialog, private activatedRoute: ActivatedRoute) {
+  constructor() {
     this.listCategory = [...new Set(this.products.map((p) => p.category))];
     
   }
@@ -28,18 +28,6 @@ export class BodyComponent implements OnInit {
 
   productsByCategory(category: string): Product[] {
     return this.products.filter((p) => p.category === category);
-  }
-
-  openModal(product: any): void {
-
-    this.produtoId = this.activatedRoute.snapshot.params['produtoId'];
-    this.product = findById(this.produtoId);
-    this.products = this.similiarProducts(this.produtoId);
-    
-    this.dialog.open(ModalListarItensComponent, {
-      minWidth: '800px',
-      data: product,
-  })
   }
 
   similiarProducts(id: string): Product[] {
