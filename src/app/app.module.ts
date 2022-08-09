@@ -25,7 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
-import { ModalListarItensComponent } from './componentes/modal/modal-listar-itens/modal-listar-itens.component';
+import { ModalDescricaoItemComponent } from './componentes/modal/descricao-item-modal/modal-descricao-item.component';
 import {MatButtonModule} from '@angular/material/button'
 
 
@@ -43,7 +43,7 @@ registerLocaleData(ptBr);
     TodosOsProdutosComponent,
     ListProductsComponent,
     AddProductComponent,
-    ModalListarItensComponent,
+    ModalDescricaoItemComponent,
   ],
   imports: [
     BrowserModule,

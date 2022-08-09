@@ -2,12 +2,11 @@
   <mat-card-title-group>
     <img mat-card-lg-image src="{{ product.img }}" />
   </mat-card-title-group>
-  <mat-card-content>
+  <mat-card-content >
     <p>{{ product.label }}</p>
     <p class="c-card__item-price">
       {{ product.price | currency: "BRL" }}
     </p>
     <a (click)="openModal(product)">Ver produto</a>
-    
   </mat-card-content>
 </mat-card>

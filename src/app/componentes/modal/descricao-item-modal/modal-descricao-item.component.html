@@ -14,7 +14,7 @@
 <mat-divider></mat-divider>
 
 <div mat-dialog-content>
-  <div class="container-fluid c-product" *ngIf="data">
+  <div class="c-product" *ngIf="data">
     <div class="c-product__description-card">
       <mat-card class="c-product__card">
         <img
@@ -23,8 +23,8 @@
           class="c-product__img-card"
         />
         <div class="c-product__description-product">
-          <mat-card-title>Produto XYZ</mat-card-title>
-          <span>R$60,00</span>
+          <mat-card-title>{{data.product.label}}</mat-card-title>
+          <span>{{data.product.price | currency: "BRL"}}</span>
           <mat-card-content class="my-4">
             <p>
               The Shiba Inu is the smallest of the six original and distinct

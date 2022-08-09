@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalListarItensComponent } from './modal-listar-itens.component';
+import { ModalDescricaoItemComponent } from './modal-descricao-item.component';
 
-describe('ModalListarItensComponent', () => {
-  let component: ModalListarItensComponent;
-  let fixture: ComponentFixture<ModalListarItensComponent>;
+describe('ModalDescricaoItemComponent', () => {
+  let component: ModalDescricaoItemComponent;
+  let fixture: ComponentFixture<ModalDescricaoItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalListarItensComponent ]
+      declarations: [ ModalDescricaoItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalListarItensComponent);
+    fixture = TestBed.createComponent(ModalDescricaoItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

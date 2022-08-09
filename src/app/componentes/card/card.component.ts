@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { ModalListarItensComponent } from '../modal/modal-listar-itens/modal-listar-itens.component';
+import { ModalDescricaoItemComponent } from '../modal/descricao-item-modal/modal-descricao-item.component';
 import { BD_VIRTUAL_STORE, findById, Product } from '../shared/store';
 
 @Component({
@@ -23,14 +23,13 @@ export class CardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.product.price);
   }
 
   openModal(product: Product): void {
     this.produtoId = this.activatedRoute.snapshot.params['produtoId'];
     this.products = this.similiarProducts(this.produtoId);
 
-    this.dialog.open(ModalListarItensComponent, {
+    this.dialog.open(ModalDescricaoItemComponent, {
       minWidth: '100px',
       data: { product, products: this.products },
     });

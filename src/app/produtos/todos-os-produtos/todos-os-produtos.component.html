@@ -2,14 +2,14 @@
   <div class="c-category">
     <span>Categorias</span>
     <mat-divider class="mb-2"></mat-divider>
-    <div class="c-category__list-category">
-        <mat-selection-list #shoes>
-            <mat-list-option *ngFor="let shoe of typesOfShoes">
-              {{shoe}}
+    <div class="c-category__list-category" [formGroup]="formCategory">
+        <mat-selection-list #category >
+            <mat-list-option *ngFor="let category of listCategory"  (click)="productsByCategory(category)" >
+              {{category}}
             </mat-list-option>
           </mat-selection-list>
           <p>
-            Opçoes selecionadas: {{shoes.selectedOptions.selected.length}}
+            Opções selecionadas: {{category.selectedOptions.selected.length}}
           </p>
     </div>
   </div>
@@ -20,7 +20,7 @@
     </div>
     <mat-divider class="mb-3"></mat-divider>
     <div class="m-3">
-      <app-list-products [listProducts]="products"></app-list-products>
+      <app-list-products [listProducts]="listProductsByCategory"></app-list-products>
     </div>
   </div>
 </div>

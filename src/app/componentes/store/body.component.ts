@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BD_VIRTUAL_STORE, findById, Product } from '../shared/store';
-import { ModalListarItensComponent } from '../modal/modal-listar-itens/modal-listar-itens.component';
-import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
+import { BD_VIRTUAL_STORE,  Product } from '../shared/store';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

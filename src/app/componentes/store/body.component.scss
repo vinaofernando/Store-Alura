@@ -56,22 +56,7 @@
   }
 }
 
-.c-card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
 
-  &__item {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    img {
-      width: 100%;
-      height: 90%;
-    }
-  }
-}
 @include media-breakpoint-down(md) {
   .c-banner {
     height: 50%;
