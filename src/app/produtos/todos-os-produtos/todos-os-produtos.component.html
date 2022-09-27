@@ -4,7 +4,7 @@
     <mat-divider class="mb-2"></mat-divider>
     <div class="c-category__list-category" [formGroup]="formCategory">
         <mat-selection-list #category >
-            <mat-list-option *ngFor="let category of listCategory"  (click)="productsByCategory(category)" >
+            <mat-list-option id="category" *ngFor="let category of listCategory"  (click)="productsByCategory(category)" >
               {{category}}
             </mat-list-option>
           </mat-selection-list>

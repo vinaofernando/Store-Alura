@@ -1,10 +1,19 @@
 export type Product = {
   id: string;
   category: string;
-  secao:string;
+  secao: string;
   label: string;
   price: number;
   img: string;
+};
+
+export const EMPTY_PRODUCT: Product = {
+  id: '',
+  category: '',
+  secao: '',
+  label: '',
+  price: 0,
+  img: '',
 };
 
 export const BD_VIRTUAL_STORE: Product[] = [
@@ -13,7 +22,7 @@ export const BD_VIRTUAL_STORE: Product[] = [
     label: 'Stars War 1',
     category: 'Stars War',
     secao: 'personagens',
-    price: 10.50,
+    price: 10.5,
     img: './assets/img/star-wars/copo-clone.png',
   },
   {

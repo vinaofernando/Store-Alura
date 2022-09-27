@@ -1,0 +1,26 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+.c-login {
+  background-image: url('https://i.pinimg.com/originals/16/11/f6/1611f689f3d1b80694b666231c3ab3b2.jpg') ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  
+}
+
+@include media-breakpoint-down(md) {
+  .c-login__form {
+    width: 100%;
+  }
+}

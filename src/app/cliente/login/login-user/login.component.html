@@ -1,0 +1,47 @@
+<div class="container-fluid c-login">
+  <h1>Bem-Vindo a AluraGeek</h1>
+  <app-form-login-user
+    [registerUser]="false"
+    (formData)="signIn($event)"
+  ></app-form-login-user>
+  <div class="d-flex flex-column justify-content-center mt-2">
+    <a class="text-white fs-6 mt-4 text-decoration-none" routerLink="/register">
+      Criar novo cadastro <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <a
+      class="text-white text-decoration-none mt-3 fs-6"
+      routerLink="/forgot-password"
+      >Esqueci minha senha</a
+    >
+  </div>
+  <span class="text-white mt-4 fs-5">Faça login com sua rede social</span>
+  <div class="mt-3 fs-3 d-flex justify-content-center">
+    <div class="me-4">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="googleAuth()"
+      >
+        <i class="fa-brands fa-google fs-3"></i>
+      </button>
+    </div>
+    <div class="me-4">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="signInGitHub()"
+      >
+        <i class="fa-brands fa-github fs-3"></i>
+      </button>
+    </div>
+    <div class="me-2">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="facebookAuth()"
+      >
+        <i class="fa-brands fa-facebook fs-3"></i>
+      </button>
+    </div>
+  </div>
+</div>

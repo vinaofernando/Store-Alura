@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './cliente/login/login.component';
+import { ForgotPasswordComponent } from './cliente/login/forgot-password/forgot-password.component';
+import { LoginComponent } from './cliente/login/login-user/login.component';
+import { RegisterUserComponent } from './cliente/login/register-user/register-user.component';
 import { BodyComponent } from './componentes/store/body.component';
 import { AddProductComponent } from './produtos/add-product/add-product.component';
 import { TodosOsProdutosComponent } from './produtos/todos-os-produtos/todos-os-produtos.component';
@@ -21,6 +23,12 @@ const routes: Routes = [
   {
     path: 'add-product',
     component: AddProductComponent,
+  },
+  { path: 'register',
+   component: RegisterUserComponent 
+  },
+  { path: 'forgot-password',
+   component: ForgotPasswordComponent 
   },
 ];
 

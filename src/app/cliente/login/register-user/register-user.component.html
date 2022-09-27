@@ -1,0 +1,7 @@
+<div class="container-fluid c-login ">
+    <h1>Cadastro Rápido</h1>
+    <app-form-login-user [registerUser]="true" (formData)="signUp($event)"></app-form-login-user>
+    <a class="text-white mt-4 text-decoration-none" routerLink="/login">
+      <i class="fa-solid fa-arrow-left"></i> Voltar para a tela de login 
+    </a>
+  </div>

@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { faDoorClosed, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Product, EMPTY_PRODUCT } from '../../shared/store';
 import { CarteiraResultadosModal } from './modal-descricao-item.types';
 
 @Component({
@@ -10,14 +11,16 @@ import { CarteiraResultadosModal } from './modal-descricao-item.types';
 })
 export class ModalDescricaoItemComponent implements OnInit {
   faDoorClosed = faTimes
+ 
 
 
   constructor(public dialogRef: MatDialogRef<ModalDescricaoItemComponent>,
     @Inject(MAT_DIALOG_DATA) public data: CarteiraResultadosModal, 
-    ) { }
+    ) { 
+     
+    }
 
   ngOnInit(): void {
-    
   }
   
   close(){

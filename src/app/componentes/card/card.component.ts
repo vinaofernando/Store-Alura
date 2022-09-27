@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { ModalDescricaoItemComponent } from '../modal/descricao-item-modal/modal-descricao-item.component';
-import { BD_VIRTUAL_STORE, findById, Product } from '../shared/store';
+import { BD_VIRTUAL_STORE, EMPTY_PRODUCT, findById, Product } from '../shared/store';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +10,7 @@ import { BD_VIRTUAL_STORE, findById, Product } from '../shared/store';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() product!: Product;
+  @Input() product: Product = EMPTY_PRODUCT;
 
   public products: Product[] = BD_VIRTUAL_STORE;
   public listCategory!: string[];
@@ -23,15 +23,15 @@ export class CardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
   }
 
   openModal(product: Product): void {
     this.produtoId = this.activatedRoute.snapshot.params['produtoId'];
     this.products = this.similiarProducts(this.produtoId);
-
     this.dialog.open(ModalDescricaoItemComponent, {
       minWidth: '100px',
-      data: { product, products: this.products },
+      data: { product: product, products: this.products },
     });
   }
 

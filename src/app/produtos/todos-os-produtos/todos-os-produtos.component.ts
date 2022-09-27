@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import {
   Product,
-  findById,
   BD_VIRTUAL_STORE,
 } from 'src/app/componentes/shared/store';
-import { BodyComponent } from 'src/app/componentes/store/body.component';
 
 @Component({
   selector: 'app-todos-os-produtos',
@@ -17,8 +14,8 @@ import { BodyComponent } from 'src/app/componentes/store/body.component';
 export class TodosOsProdutosComponent implements OnInit {
   public formCategory!: FormGroup;
 
-  public produtoId!: string;
-  public product!: Product | undefined;
+  public produtoId: string = '';
+  public product: Product | undefined;
   public products: Product[] = BD_VIRTUAL_STORE;
   public listProductsByCategory$ = new BehaviorSubject<Product[]>([]);
   public listCategory: string[] = [];
